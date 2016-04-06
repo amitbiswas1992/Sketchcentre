@@ -1,19 +1,20 @@
 
 	
-<body style="background-color:#34495e;">
+<body style="background-color:#cccccc;">
 <div class="jumbotron center">
 
 <h2 align= "center">Welcome To SketchCentre</h2>
 <h4 align="center">Your first online Art Gallery</h4>
 
-
-
+<% if user_signed_in? %>
+# do something
+<% else%>
 <p1>
-    <%=link_to"Log in","#", class: "btn btn-danger"%> 
+    <%=link_to"Log in",new_user_session_path,class: "btn btn-danger"%> 
 
     <%=link_to"Sign Up",new_user_registration_path,class: "btn btn-primary"%>
 </p1>
-
+<%  end %>
 
 </div>
 
